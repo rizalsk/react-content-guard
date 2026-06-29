@@ -1,0 +1,13 @@
+.root {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+.root * {
+  -webkit-user-drag: none;
+}
+
+.root [data-allow-select='false'] {
+  user-select: none;
+  -webkit-user-select: none;
+}

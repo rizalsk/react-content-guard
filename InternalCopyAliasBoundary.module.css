@@ -1,0 +1,24 @@
+.contextMenu {
+  min-width: 140px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+  padding: 6px;
+}
+
+.contextMenuButton {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+}
+
+.contextMenuButton:hover {
+  background: #f8f3f7;
+}
