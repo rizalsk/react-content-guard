@@ -1,6 +1,6 @@
 {
   "name": "@rizalsk/react-content-guard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React/Next.js components for content protection: clipboard guard, screen protection, copy prevention, and drag-drop blocking.",
   "author": {
     "name": "rizalsk",

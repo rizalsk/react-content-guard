@@ -233,16 +233,26 @@ import {
   AppClipboardBoundary,
   NoDragDropBoundary,
   InternalCopyAliasBoundary,
+  CopyProtector,
 } from '@rizalsk/react-content-guard'
 
-<ScreenProtector enabled={true} devTools={true}>
-  <AppClipboardBoundary
-    enabled={true}
-    onWarning={(msg) => toast.warning(msg)}
-  >
-    <NoDragDropBoundary enabled={true}>
-      <InternalCopyAliasBoundary enabled={true}>
-        {children}
+<ScreenProtector
+  latchBackgroundVariant="rings"
+  latchBackgroundColor="#dbddf1ff"
+  latchPatternColor="#0e719eff"
+  overlayTextColor="#30323fff"
+  latchPatternOpacity={0.23}
+  latchAnimationPaused={false}
+  enabled={true}
+>
+  <AppClipboardBoundary enabled={true}>
+    <NoDragDropBoundary className="nara-no-drag" enabled={true}>
+      <InternalCopyAliasBoundary enabled={true} restoreDelay={100}>
+        <NoDragDropBoundary className="nara-no-drag" enabled={true}>
+          <CopyProtector className="h-100" enabled={true}>
+            {children}
+          </CopyProtector>
+        </NoDragDropBoundary>
       </InternalCopyAliasBoundary>
     </NoDragDropBoundary>
   </AppClipboardBoundary>
